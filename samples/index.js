@@ -1,4 +1,4 @@
-import Bilza, { Ui, CompFactory as cf } from "../node_modules/bilza/src/bilza.js";
+import Bilza, { Ui, CompFactory as cf } from "../bilza/src/bilza.js";
 let bil = new Bilza("bilza", 70);
 bil.background.color.set("#151f59");
 bil.insert.alwaysOn(cf.frameCounter());
