@@ -1,4 +1,4 @@
-import BaseComponentBase from "../../typescript/BaseComponent/99BaseComponentBase.js.js";
+import BaseComponentBase from "./99BaseComponentBase.js";
 export default class TimeObj extends BaseComponentBase {
     duration: number;
     protected insertTimeInVid: number;

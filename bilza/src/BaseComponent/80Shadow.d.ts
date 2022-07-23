@@ -1,4 +1,4 @@
-import TimeObj from "../../typescript/BaseComponent/90TimeObj.js.js";
+import TimeObj from "./90TimeObj.js";
 export default class Shadow extends TimeObj {
     shadowColor: string;
     shadowOffsetX: number;

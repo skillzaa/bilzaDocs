@@ -1,4 +1,4 @@
-import { Pack, AniString, BaseComponent, AniNumber, FontFamily } from "../../typescript/bilza.js.js";
+import { Pack, AniString, BaseComponent, AniNumber, FontFamily } from "../bilza.js";
 export default class Text extends BaseComponent {
     content: AniString;
     maxDisplayChars: AniNumber;

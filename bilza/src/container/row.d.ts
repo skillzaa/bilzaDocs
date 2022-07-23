@@ -1,6 +1,6 @@
-import { Pack } from "../../typescript/bilza.js.js";
-import BaseComponent from "../../typescript/BaseComponent/00BaseComponent.js.js";
-import RawText from "../../typescript/components/rawText.js.js";
+import { Pack } from "../bilza.js";
+import BaseComponent from "../BaseComponent/00BaseComponent.js";
+import RawText from "../components/rawText.js";
 export default class Row extends BaseComponent {
     textArray: RawText[];
     private incommingTextArray;

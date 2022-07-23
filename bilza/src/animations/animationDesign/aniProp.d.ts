@@ -1,4 +1,4 @@
-import IFilter from "../../../typescript/animations/animationDesign/IFilter.js.js";
+import IFilter from "./IFilter.js";
 export default class AniProp<T> {
     private _value;
     protected filters: IFilter<T>[];

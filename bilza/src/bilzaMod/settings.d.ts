@@ -1,4 +1,4 @@
-import { Pack } from "../../typescript/bilza";
+import { Pack } from "../bilza";
 export default class Settings {
     clearCanvasBwFrames: boolean;
     loadSystemBackground: boolean;

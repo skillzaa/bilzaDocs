@@ -1,4 +1,4 @@
-import { DrawLayer, IComponent, Pack } from "../../typescript/bilza";
+import { DrawLayer, IComponent, Pack } from "../bilza";
 export default class Comps {
     compArray: IComponent[];
     constructor();

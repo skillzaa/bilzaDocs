@@ -1,5 +1,5 @@
-import { Pack } from "../../typescript/bilza.js.js";
-import WidthHeight from "../../typescript/BaseComponent/71WidthHeight.js.js";
+import { Pack } from "../bilza.js";
+import WidthHeight from "./71WidthHeight.js";
 export default class Loc extends WidthHeight {
     charsWidth: null | ((chars: string, fontSize: number, fontName: string) => number);
     constructor();

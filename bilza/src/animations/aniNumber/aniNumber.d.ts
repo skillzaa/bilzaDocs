@@ -1,4 +1,4 @@
-import AniProp from "../../../typescript/animations/animationDesign/aniProp.js.js";
+import AniProp from "../animationDesign/aniProp.js";
 export default class AniNumber extends AniProp<number> {
     constructor(defaultValue: number);
     animate(from: number, to: number, startValue: number, endValue: number): void;

@@ -1,5 +1,5 @@
-import { IComponent, Pack } from "../../typescript/bilza.js.js";
-import RotateObj from "../../typescript/BaseComponent/60rotateObj.js.js";
+import { IComponent, Pack } from "../bilza.js";
+import RotateObj from "./60rotateObj.js";
 export default class BaseComponent extends RotateObj implements IComponent {
     constructor();
     init(p: Pack): boolean;

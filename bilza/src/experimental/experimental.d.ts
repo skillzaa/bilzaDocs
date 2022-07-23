@@ -1,4 +1,4 @@
-import Icon from "../../typescript/components/icon.js.js";
+import Icon from "../components/icon.js";
 export default class Experimental {
     static Icon(code?: number, colorHax?: string): Icon;
 }

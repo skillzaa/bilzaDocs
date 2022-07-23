@@ -1,4 +1,4 @@
-import { Pack, BaseComponent, AniNumber, FontFamily } from "../../typescript/bilza.js.js";
+import { Pack, BaseComponent, AniNumber, FontFamily } from "../bilza.js";
 export default class Icon extends BaseComponent {
     code: number;
     fontFamily: FontFamily;

@@ -1,4 +1,4 @@
-import AniNoPercBase from "../../../typescript/animations/aniNoPerc/AniNoPercBase.js.js";
+import AniNoPercBase from "./AniNoPercBase.js";
 export default class AniNoPerc extends AniNoPercBase {
     constructor(defaultValue?: number);
     init(usePercentages: boolean, canvasWidthHeight: number): void;

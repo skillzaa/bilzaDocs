@@ -1,6 +1,6 @@
-import Background from "../../typescript/components/background.js.js";
-import Settings from "../../typescript/bilzaMod/settings.js.js";
-import Insert from "../../typescript/bilzaMod/insert.js.js";
+import Background from "../components/background.js";
+import Settings from "./settings.js";
+import Insert from "./insert.js";
 export default class Bilza {
     background: Background;
     insert: Insert;

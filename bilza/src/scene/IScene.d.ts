@@ -1,4 +1,4 @@
-import { IComponent } from "../../typescript/bilza.js.js";
+import { IComponent } from "../bilza.js";
 export default interface IScene {
     getComps(): IComponent[];
     getEndTime(): number;

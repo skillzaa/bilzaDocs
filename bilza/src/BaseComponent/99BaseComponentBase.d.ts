@@ -1,7 +1,7 @@
-import { DrawLayer, AniBoolean, AniNumber, AniNoPerc, AniColor } from "../../typescript/bilza.js.js";
-import Style from "../../typescript/design/style.js.js";
-import { XAlignOpt } from "../../typescript/BaseComponent/designBC/xAlignOpt.js.js";
-import { YAlignOpt } from "../../typescript/BaseComponent/designBC/yAlignOpt.js.js";
+import { DrawLayer, AniBoolean, AniNumber, AniNoPerc, AniColor } from "../bilza.js";
+import Style from "../design/style.js";
+import { XAlignOpt } from "./designBC/xAlignOpt.js";
+import { YAlignOpt } from "./designBC/yAlignOpt.js";
 export default class BaseComponentBase {
     xAlign: XAlignOpt;
     yAlign: YAlignOpt;

@@ -1,4 +1,4 @@
-import { DrawLayer, Pack, Style, AniNumber, AniBoolean } from "../../../typescript/bilza.js.js";
+import { DrawLayer, Pack, Style, AniNumber, AniBoolean } from "../../bilza.js";
 export default interface IComponent {
     readonly id: string;
     drawLayer: DrawLayer;

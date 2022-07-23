@@ -1,10 +1,10 @@
-import AniNumber from "../../../typescript/animations/aniNumber/aniNumber.js.js";
-import PreInitGoto from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitGoto.js.js";
-import PreInitAnimate from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitAnimate.js.js";
-import PreInitVibrate from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitVibrate.js.js";
-import PreInitRandom from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitRandom.js.js";
-import PreInitJumpBetween from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitJumpBetween.js.js";
-import PreInitOscilate from "../../../typescript/animations/aniNoPerc/designNoPerc/preInitoscilate.js.js";
+import AniNumber from "../aniNumber/aniNumber.js";
+import PreInitGoto from "./designNoPerc/preInitGoto.js";
+import PreInitAnimate from "./designNoPerc/preInitAnimate.js";
+import PreInitVibrate from "./designNoPerc/preInitVibrate.js";
+import PreInitRandom from "./designNoPerc/preInitRandom.js";
+import PreInitJumpBetween from "./designNoPerc/preInitJumpBetween.js";
+import PreInitOscilate from "./designNoPerc/preInitoscilate.js";
 export default class AniNoPercBase extends AniNumber {
     protected usePercentages: boolean | null;
     protected preInitGotos: PreInitGoto[];

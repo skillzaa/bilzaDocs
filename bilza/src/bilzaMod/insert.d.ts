@@ -1,7 +1,7 @@
-import { IComponent } from "../../typescript/bilza.js.js";
-import Comps from "../../typescript/bilzaMod/comps.js.js";
-import Duration from "../../typescript/bilzaMod/duration.js.js";
-import IScene from "../../typescript/scene/IScene.js.js";
+import { IComponent } from "../bilza.js";
+import Comps from "./comps.js";
+import Duration from "./duration.js";
+import IScene from "../scene/IScene.js";
 export default class Insert {
     private duration;
     private comps;

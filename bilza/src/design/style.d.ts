@@ -1,5 +1,5 @@
-import { LineCapStyle } from "../../typescript/design/lineCapStyle.js.js";
-import { FontFamily } from "../../typescript/design/fontFamily.js.js";
+import { LineCapStyle } from "./lineCapStyle.js";
+import { FontFamily } from "./fontFamily.js";
 export default class Style {
     fontSize: number;
     fontFamily: FontFamily;

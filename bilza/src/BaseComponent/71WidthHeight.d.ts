@@ -1,4 +1,4 @@
-import Shadow from "../../typescript/BaseComponent/80Shadow.js.js";
+import Shadow from "./80Shadow.js";
 export default class WidthHeight extends Shadow {
     constructor();
     contentWidth(): number;

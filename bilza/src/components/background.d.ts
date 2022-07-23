@@ -1,5 +1,5 @@
-import Pack from "../../typescript/pack/pack.js.js";
-import BaseComponent from "../../typescript/BaseComponent/00BaseComponent.js.js";
+import Pack from "../pack/pack.js";
+import BaseComponent from "../BaseComponent/00BaseComponent.js";
 export default class Background extends BaseComponent {
     constructor(color?: string);
     init(p: Pack): boolean;

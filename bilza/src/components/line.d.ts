@@ -1,5 +1,5 @@
-import { Pack, BaseComponent, AniNumber } from "../../typescript/bilza.js.js";
-import AniNoPerc from "../../typescript/animations/aniNoPerc/AniNoPerc.js.js";
+import { Pack, BaseComponent, AniNumber } from "../bilza.js";
+import AniNoPerc from "../animations/aniNoPerc/AniNoPerc.js";
 export default class Line extends BaseComponent {
     x2: AniNoPerc;
     y2: AniNoPerc;

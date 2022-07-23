@@ -1,5 +1,5 @@
-import Style from "../../typescript/design/style.js.js";
-import Position from "../../typescript/design/Position.js.js";
+import Style from "../design/style.js";
+import Position from "../design/Position.js";
 export default class Pack {
     private canvas;
     private ctx;
