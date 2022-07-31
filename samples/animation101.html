@@ -44,6 +44,24 @@
 </table>
 
 </div>
+<!-- <audio id="soundTrackElement">
+<source src="../sounds/mix.mp3" type="audio/mp3">
+</audio> -->
+
+<script  type="module" >
+const x = document.getElementById("soundTrackElement");
+const playBtn = document.getElementById("start");
+const stopBtn = document.getElementById("stop");
+
+playBtn.addEventListener("click",function () {
+  x.play();
+});
+stopBtn.addEventListener("click",function () {
+  x.pause();
+  x.currentTime = 0;
+});
+
+</script>
 
 <script  type="module" >
 import Bilza, { Ui, CompFactory as cf } from "../bilza/src/bilza.js";
