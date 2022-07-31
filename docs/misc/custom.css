@@ -39,6 +39,7 @@ padding:7px;
     padding:2px;
     border:1px solid grey;
 }
+li { font-size: large; line-height: 1.2em; line-height: 2em;}
 
 li>h3 {
 color: white;

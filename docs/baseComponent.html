@@ -18,25 +18,32 @@
 
 <h1>Base Component</h1>
 
-<p>BaseComponent is the Parent class for all components. It has following methods and public members:</p>
+<p>BaseComponent is the Parent class for all (most) components. 
+It has following methods and public members thus every component has these methods and public members.</p>
+
+<p>Please keep in mind that though every component will have these properties and methods but they may not be implemented by the component. So it is upto the component to implement these properties and methods as desired OR use them according to the requirement of the component.</p>
 
 <ol>
-<p>We have 2 values xAlign , yAlign. These 2 classes are used to align the X and Y coordingates of a component</p>
-    <li>public xAlign :XAlignOpt;</li>
-    <li>public yAlign : YAlignOpt;</li>
-    
-<p> We have 2 values xRotate and yRotate. These 2 classes are used to align the rotate X and rotate Y coordingates of a component</p>
-    <li>public xRotate :XAlignOpt;</li>
-    <li>public yRotate :YAlignOpt;</li>
+<li>public xAlign :XAlignOpt;</li>
+<p> Is used to align the X coordinate of a component</p>
+<li>public yAlign : YAlignOpt;</li>
+<p> Is used to align the Y coordinate of a component</p>
+
+<li>public xRotate :XAlignOpt;</li>
+<p> Is used to align the X coordinate of rotate anchor of the component</p>
+<li>public yRotate :YAlignOpt;</li>
+<p> Is used to align the Y coordinate of rotate anchor of the component</p>
+
 <p>Both of the above 2 groups of alignment classes uses the following 2 options.</p>
     <li>public readonly XAlignOpt :typeof XAlignOpt;</li>
     <li>public readonly YAlignOpt :typeof YAlignOpt;</li>
 
 <p>Every component has a random id</p>
-    <li>public readonly id :string;</li>
-    <li>public usePercentages : boolean; </li>
+<li>public readonly id :string;</li>
+
      <p> The draw layer </p>
-    <li>public drawLayer : DrawLayer; </li>
+
+     <li>public drawLayer : DrawLayer; </li>
     <li>public style:Style; </li>
     <p> This will be set by the engine so do not touch it. </p>
     <li>public alwaysOn: boolean;</li>

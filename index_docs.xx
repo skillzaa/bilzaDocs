@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel='stylesheet' href='./misc/dark.css'>
+<script src="./misc/prism.js"></script>
+<link rel="stylesheet" href="./misc/prism.css">   
+  
+<link rel="stylesheet" href="./misc/custom.css">   
+
+    <title>Bilza Documentation</title>
+
+</head>
+<body>
+    
+<h3><a href="./samples/index.html" >Samples</a></h3>    
+<hr>
+
+<h1>Table of Content</h1>
+
+<ol>
+<li><h3><a href="./docs/detailedIntroduction.html">Detailed Introduction</a></h3></li>
+<small>Please do go throught this article. It explains some of the basic concepts and ideas about the library and how it works.</small>
+    
+<li><h3><a href="./docs/InstallationandSetup.html">Installation and Setup</a></h3></li>
+    
+<li><h3><a href="./docs/rectangleExample.html">Rectangle Example</a></h3></li>
+
+<h3></h3>
+
+</ol>
+</body>
+</html>
