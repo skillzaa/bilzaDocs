@@ -18,5 +18,9 @@ import AniString from "./animations/aniString/aniString.js";
 import Experimental from "./experimental/experimental.js";
 import { UTFIcons } from "./design/utfIcons.js";
 import hsl from "./functions/hsl.js";
-export { Pack, hsl, DrawLayer, UTFIcons, Experimental, AniNumber, AniNoPerc, AniString, AniBoolean, AniColor, IComponent, Ui, Bilza, BaseComponent, CompFactory, XAlignOpt, YAlignOpt, FontFamily, Style, };
+import TextTempl from "./compFactory/textTempl.js";
+import PremadeSpriteSheets from "./premadeSpriteSheets/premadeSpriteSheets.js";
+import SpriteSheet from "./components/spriteSheet/spriteSheet.js";
+import SpriteSheetAlt from "./components/spriteSheet/spriteSheetAlt.js";
+export { Pack, TextTempl, PremadeSpriteSheets, SpriteSheet, SpriteSheetAlt, hsl, DrawLayer, UTFIcons, Experimental, AniNumber, AniNoPerc, AniString, AniBoolean, AniColor, IComponent, Ui, Bilza, BaseComponent, CompFactory, XAlignOpt, YAlignOpt, FontFamily, Style, };
 //# sourceMappingURL=bilza.d.ts.map
