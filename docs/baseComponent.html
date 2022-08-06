@@ -50,49 +50,43 @@ It has following methods and public members thus every component has these metho
 <h3><li>public responsiveDims : boolean;</li></h3>
 <p>If  responsiveDims = false the values of width and height will be considered as raw pixels and not percentages.
 
+<h3><li>public interactive : boolean;</li></h3>
+<p>Not implemented yet.</p>
  <!-- Break -->
-public interactive : boolean; //for mouse click etc 
-//--The draw layer
-public drawLayer : DrawLayer; 
-public style:Style; 
-//--This will be set by the engine so do not touch it.
-public alwaysOn: boolean;
-public version :string;
-// IMPLEMENTED IN ENGINE-- visible = false will not be drawn
-public visible :AniBoolean;//
-//--implemented in Base Component but component creator has to implement it
-public rotation :AniNumber;
-//--implemented in Base Component but component creator has to implement it
-public opacity :AniNumber;
-//--The color prop points to the color of the main content
-public color :AniColor;
-//-- This will always be implemented in some special cases like text which uses fontSize this will represent fontSize. However this will be used in 100% of the components
-public width :AniNumber; // no need to convert it into AniNoPers
-//--same as width
-public height :AniNumber;// no need to convert it into AniNoPers
-//--this will come in handy during using the lib with gui and while making interactive tools.
+<h3><li>public drawLayer : DrawLayer;</li></h3>
+<p>The draw layer.</p>
 
-public  selected :boolean; //dont complicate
-
-<p>PAdding and Border
-public border :AniNumber;         
-public paddingTop :AniNoPerc;        
-public paddingBottom :AniNoPerc;         
-public paddingRight :AniNoPerc;         
-public paddingLeft : AniNoPerc;         
-public x :AniNoPerc; 
-public y :AniNoPerc;
-
-<p>Basic colors
-public colorBackground :AniColor;
-public colorBorder :AniColor;
-public showBackground :AniBoolean;
-
-///////////////<p>-PRIVATE----/////////////////// 
-<p>these 2 variables will be set in init
-canvasWidth :number | null;    //required by all comps
-canvasHeight :number | null;    //required by all comps
-<p>
+<h3><li>public style:Style;</li></h3>
+<p>The style object.</p>
+<h3><li>public alwaysOn: boolean;</li></h3>
+<p>This will be set by the engine so do not touch it.</p>
+<h3><li>public version :string;</li></h3>
+<p>This will be set by the engine so do not touch it.</p>
+<h3><li>public visible :AniBoolean;</li></h3>
+<p>visible = false will not be drawn. It is implemented in engine thus component creator does not need to implement.</p>
+<h3><li>public rotation :AniNumber;</li></h3>
+<p>Implemented in Base Component but component creator has to implement it.</p>
+<h3><li>public opacity :AniNumber;</li></h3>
+<p>Implemented in Base Component but component creator has to implement it.</p>
+<h3><li>public color :AniColor;</li></h3>
+<p>The color prop points to the color of the main content.</p>
+<h3><li>public width :AniNumber;</li></h3>
+<p>It is based on responsiveDims</p>
+<h3><li>public height :AniNumber;</li></h3>
+<p>It is based on responsiveDims</p>
+<h3><li>public  selected :boolean;</li></h3>
+<p>This will come in handy during using the lib with gui and while making interactive tools.</p>
+<h3><li>public border :AniNumber;</li></h3>
+<h3><li>public paddingTop :AniNoPerc;</li></h3>
+<h3><li>public paddingBottom :AniNoPerc;</li></h3>
+<h3><li>public paddingRight :AniNoPerc;</li></h3>
+<h3><li>public paddingLeft : AniNoPerc;</li></h3>
+<h3><li>public x :AniNoPerc;</li></h3>
+<h3><li>public y :AniNoPerc;</li></h3>
+<h3><li>public colorBackground :AniColor;</li></h3>
+<h3><li>public colorBorder :AniColor;</li></h3>
+<h3><li>public showBackground :AniBoolean;</li></h3>
+  
 </ol>
 
 
