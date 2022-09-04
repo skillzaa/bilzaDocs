@@ -1,0 +1,1 @@
+//# sourceMappingURL=lineSquare.d.ts.map

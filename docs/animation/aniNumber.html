@@ -9,28 +9,62 @@
     <link rel="stylesheet" href="../misc/custom.css">   
 
     <script src="../misc/prism.js"></script>
-  
+  <style>
+    .red {color:red;}
+    .orange {color:orange;}
+  </style>
 
     <title>Bilza.js: AniNumber</title>
 </head>
 <body>
     <h6><a href="/">Home</a></h6>
 
-<h1>AniNumber</h1>
+<h1 class="orange">AniNumber</h1>
 <p><b>AniNumber (Animated Number) is a class that wraps a number and animate it.</b></p>
 <p>Most of the numeric properties of a component is bilza library has AniNumber class. It provides methods like animate, vibrate, jumpBetween etc.</p>
----
+
+<hr>
 <h2>Following methods are available</h2>
 
 <ol>
+<hr>
+    <li><span class="red">goto</span>( atSec :number,value :number)</li>  
+    <ol>
+        <li> atSec : The time at which to change value.</li>
+        <li>value : The value (number).</li>
+    </ol>  
+<hr>
+    <li><span class="red">animate</span>( StartSec :number, endSec :number,startValue :number,endValue :number)</li>    
 
-    <li>goto</li>    
-    <li>animate</li>    
-    <li>vibrate</li>    
-    <li>jumpBetween</li>    
-    <li>random</li>    
-    <li>oscillate</li>    
-
+        <ol>
+            <li>StartSec : Start time of animation in seconds.</li>
+            <li>endSec : End time of animation in seconds.</li>
+            <li>startValue : Starting value of AniNumber.</li>
+            <li>endValue : End value of AniNumber.</li>
+        </ol>
+<hr>
+    <li><span class="red">goto</span>vibrate</li>    
+    <small>Underconstruction</small>
+<hr>    
+    <li><span class="red">jumpBetween</span>(startSec :number,endSec :number,firstValue :T, secondValue :T,delayInMS :number=1000</li>   
+    <ol>
+        <li>StartSec : Start time of animation in seconds.</li>
+        <li>endSec : End time of animation in seconds.</li>
+        <li>firstValue : First Value to jump to.</li>
+        <li>secondValue : Second Value to jump to.</li>
+    </ol> 
+<hr>
+    <li><span class="red">random</span>(StartSec :number,endSec :number,min :number=0, max :number=100, delayInMs :number=10)</li>    
+    <ol>
+        <li>StartSec : Start time of animation in seconds.</li>
+        <li>endSec : End time of animation in seconds.</li>
+        <li>min : Minimum value of random number.</li>
+        <li>max : Maximum value of random number.</li>
+    </ol>
+<hr>
+    <li><span class="red">oscillate</span>(StartSec :number,endSec :number,startValue :number, endValue :number,secPerIter :number= 1,stopAt=endValue</li>    
+    <small>Underconstruction</small>
+<hr>
 </ol>
 
 

@@ -1,5 +1,31 @@
 {
+  "name": "bilzadocs",
+  "version": "0.0.1",
+  "description": "Bilza.js Documentation, examples and projects",
+  "main": "src/bilza.js",
+  "scripts": {   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skillzaa/bilzaDocs"
+  },
+  "keywords": [
+    "animation",
+    "javascipt animation",
+    "canvas",
+    "html5 canvas",
+    "html5 canvas animation",
+    "business presentation",
+    "slides"
+  ],
+  "author": "Bilal Tariq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skillzaa/bilzaDocs/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
   "dependencies": {
-    "bilza": "^0.0.29"
+  
   }
 }

@@ -1,0 +1,43 @@
+import { DrawLayer } from "../bilza.js";
+import { AniNumber, AniPerc, AniBoolean, AniColor } from "../animationModule/animations.js";
+import Style from "../design/style.js";
+import { XAlignOpt } from "./designBC/xAlignOpt.js";
+import { YAlignOpt } from "./designBC/yAlignOpt.js";
+export default class BaseComponentBase {
+    protected xAlign: XAlignOpt;
+    protected yAlign: YAlignOpt;
+    protected xRotate: XAlignOpt;
+    protected yRotate: YAlignOpt;
+    protected readonly XAlignOpt: typeof XAlignOpt;
+    protected readonly YAlignOpt: typeof YAlignOpt;
+    readonly id: string;
+    private interactive;
+    drawLayer: DrawLayer;
+    protected style: Style;
+    alwaysOn: boolean;
+    readonly version: string;
+    visible: AniBoolean;
+    rotation: AniNumber;
+    opacity: AniNumber;
+    color: AniColor;
+    width: AniPerc | AniNumber;
+    height: AniPerc | AniNumber;
+    selected: boolean;
+    border: AniNumber;
+    colorBorder: AniColor;
+    borderContentArea: AniNumber;
+    colorContentAreaBorder: AniColor;
+    paddingTop: AniPerc | AniNumber;
+    paddingBottom: AniPerc | AniNumber;
+    paddingRight: AniPerc | AniNumber;
+    paddingLeft: AniPerc | AniNumber;
+    x: AniPerc | AniNumber;
+    y: AniPerc | AniNumber;
+    colorBackground: AniColor;
+    showBackground: AniBoolean;
+    constructor();
+    setRespPadding(tf?: boolean): boolean;
+    setRespLoc(tf?: boolean): boolean;
+    setRespDims(tf?: boolean): boolean;
+}
+//# sourceMappingURL=99BaseComponentBase.d.ts.map
