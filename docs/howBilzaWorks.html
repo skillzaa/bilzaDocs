@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='./misc/dark.css'>
+    <script src="./misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="./misc/custom.css">   
+
+<title>Detailed Introduction Bilza.js</title>
+
+</head>
+<body>
+
+<a href="/" >Home</a>    
+<hr>
+<a href="/samples.html" >Samples</a>   
+<hr>
+
+<h1>How Bilza.js Works</h1>
+
+Following are the steps to create animations with bilza.js:
+<ol>
+<li> <b>Create Bilza Engine</b></li>
+
+ The first step is to create an instance of bilza engine. Here we decide about the width and height of the canvas that we want to create.
+
+ Also in this step we decide if we want to keep the canvas size responsive (i.e equal to 70% of the screen size) or to make the canvas of a fixed size. 
+
+<li> <b>Create Components</b> :</li>
+
+<b>Please keep in mind that every thing that you see on bilza canvas is a components</b>. We create components and them insert them in bilza engine.
+
+Currently components avaialbe in the library are
+1. grid
+1. circle
+1. rect
+1. fillRect
+1. frameCounter
+1. text
+1. line
+1. marker (not complete)
+1. pic
+1. particleSystem
+1. spriteSheet (not complete)
+1. many others are in development
+
+You can <strong>use these components</strong> to quickly draw complex animations.  
+
+<li> <b>Edit Components</b> :</li>
+
+<p>We edit components by editing their properties and attaching animations to them.</p> 
+
+<p>Each of these components have 2 sets of properties (called the props).</p> 
+<p>One set of props are those that these components get from their parent object which are common among all the components (except few). These props are refered to as <b>core props</b>.</p>
+<p>Second set of props is what is unique to that specific component.These props are refered to as <b>component props</b>.</p>
+<p>The props that (almost) all of the components share are like:</p>
+    <ol>
+    <li> x</li>
+    <li> y</li>
+    <li> color</li>
+    <li> width</li>
+    <li> height</li>
+    <li> rotation</li>
+    <li> opacity</li>
+    <li> border</li>
+    <li> colorBorder</li>
+    <li> and many more .......</li>
+    </ol>
+
+<p>The props that are unique to each component are explained on the relevant page of that component (work in progress).</p>
+
+<p><b>We add animation to a component by adding animation to one of its props</b> For example every component has "opacity" prop. We can animate it to go from value 100 to value 0 in 1 second starting from frame 10 to 11. </p>
+
+<li> <b>Inserting Components into Bilza Engine</b> :</li>
+
+<p>When ever we insert components into bilza engine, we have to tell the engine the starting frame (starting time) and the ending frame (ending time) of that components. A component is just loaded and displayed between its starting frame and ending frame.When all components have completed their ending frame, the animation ends.</p>
+
+<p>When we insert a component into bilza engine, we have following options:</p>
+
+<h4>alwaysOn</h4>
+
+<p>This will make the component visible throughout the duration of the animation. However, inserting components with alwaysOn does not affect the duration of the animation, we need other components to give the animation some duration to run.</p>
+
+<h4>add</h4>
+
+<p>When we "add" a component, we have to provide the starting time (also called the starting frame) and the duration. The component will appear just between its starting and ending frame. If the ending frame is larger than the current duration of the animation will extend its self to accommodate the newly inserted component. Keep in mind that we can create blank frames while inserting components and the engine will not object to that, assuming you actually mean to create blank frames. For example, if we insert componentOne from frame 0 to 60 and componentTwo from frame 120 to 300. The animation duration has been set to 300 seconds, but there is no component displayed between frame 60 and 120. This is not an error, but may occur without knowing.</p>
+
+<h4>append</h4>
+
+<p>This comes in handy when we want to use premade scenes and just append them together (stitch them together like LEGO pieces).</p>
+
+<li> <b>Running the Animation</b> : </li>
+
+<p>The last step is to run the animation.</p>
+
+</ol>
+</body>
+</html>
