@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='./misc/dark.css'>
+    <script src="./misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="./misc/custom.css">   
+
+<title>Detailed Introduction Bilza.js</title>
+
+</head>
+<body>
+
+<a href="/" >Home</a>    
+<hr>
+<a href="/samples.html" >Samples</a>   
+<hr>
+
+<h1>Understanding Componets And Props</h1>
+
+<p>Here are some core concepts one by one.</p>
+
+<blockquote>Anything that is draw on the screen by bilza.js is a Component.</blockquote>
+
+<blockquote>Every Component has props (properties).These properties are like opacity, rotation,width,height,x,y etc etc.</blockquote>
+
+<blockquote>The props that Components have are of 2 type. First type of props are called "Core Props" which each Component inherets from "BaseComponent" class. Second type of props are called "Component Props" which are individual to each component depending upon the purpose of that Component.</blockquote>
+
+<blockquote>At any given time a Component represents the state of its props. For example if we set the color prop of a component to red it will display in red color</blockquote>
+
+<blockquote>Every Prop (core prop or Component props) is a wrapper around a value (string,number,boolean). For example the "rotation" prop is a wrapper around a Number which represents the rotate angle of the component.</blockquote>
+
+<blockquote>So any prop (core or component prop) will be one of the following Types</blockquote>
+
+<h3>AniNumber (Animated Number)</h3>
+<p>This is a wrapper around a number. Props like rotation,opacity,fontSize etc are of type AniNumber</p>
+
+<h3>AniBoolean (Animated Boolean)</h3>
+<p>This is a wrapper around a boolean. Props like "visible", "showBackground"  etc are of type AniBoolean </p>
+
+<h3>AniString (Animated String)</h3>
+<p>This is a wrapper around a string. Props like "content" etc are of type AniString</p>
+
+<h3>AniColor (Animated Color)</h3>
+<p>This is a wrapper around a color. Work in progress!!!!! </p>
+
+<h3>AniPerc (Animated Number)</h3>
+<p>This is a wrapper around a Percentage. Props like width and height  are of type AniPerc</p>
+
+
+<blockquote>Each of these Props provide methods (like animate, goto, jumpBetween) using which we can animate them.</blockquote>
+
+<blockquote>So to animate a Component we attach animations to its props.</blockquote>
+
+<hr/>
+<small>The Core props are present in every component BUT depending upon the purpose of the Component it may not implement some of the Core props or it may implement them differently.</small>
+
+
+
+</body>
+</html>

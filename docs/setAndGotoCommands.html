@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='./misc/dark.css'>
+    <script src="./misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="./misc/custom.css">   
+
+<title>Detailed Introduction Bilza.js</title>
+
+</head>
+<body>
+
+<a href="/" >Home</a>    
+<hr>
+<a href="/samples.html" >Samples</a>   
+<hr>
+
+<h1>Set And Goto Commands</h1>
+
+<p>Every Prop type (may that be AniBoolean or AniString) has two very important methods called "set" method and "goto" method. Both of these are very important and powerful.</p>
+
+<p>Before we dive into "set" and "goto" methods lets understand that a bilza animation has 2 states.</p>
+<ol>
+    <li>The compile Time State:</li>
+
+    <p>Compile time is when the animation is being read (compiled) by Javascript compiler (in the browser) but has not yet started the execution. It means that the compiler has not yet reached "bil.start" statement.</p>
+    
+    <li>The Run Time State:</li>
+    <p>Once the Javascript compiler executes "bil.start" it starts running the animation in a loop and thus this state is called the run-time or running state.</p>
+</ol>
+
+<blockquote>In Simple words the life of bilza.js animation while it is being executed in the browser can be divided into 2 parts: first before the compiler has started the animation loop and second after that point.</blockquote>
+
+<p>It is important to understand that since the "set" method is for compile time and "goto" method is for run-time.</p>
+
+<h3>set(value :T)</h3>
+<ol>
+    <li>The "set" method will set the initial value of a property.</li>
+    <li>Every time we call "set" method it over writes the previously set initial value of the prop thus only the last set value is appiled.</li>
+    <li>The "set" method sets the initial value of a prop and does not have any control over the value once the animation starts running.</li>
+   
+</ol>
+
+<h3>goto(AtTimeSec :number, value :T)</h3>
+<ol>
+    <li>Using goto method we can set the value of any prop at a specific time during animation.</li>
+    <li>First argument "AtTimeSec" is the second at which the change should happen and the second argument is the value.</li>
+</ol>
+
+<p>The input values of both the method is of type the prop represents. For example if we are dealing with AniBoolean the input for both methods is a boolean and if we are dealing with AniNumber then the input is a number.</p>
+</body>
+</html>

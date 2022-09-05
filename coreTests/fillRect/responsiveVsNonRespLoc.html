@@ -21,10 +21,11 @@
 }
 </style>
     <!-- <script src="../00misc/custom.css"></script> -->
+    <script src="../00misc/dark.js"></script>
     <script src="../00misc/prism.js"></script>
     <link rel="stylesheet" href="../00misc/prism.css">   
 
-    <title>Bilza Core Samples</title>
+    <title>Component Core Samples</title>
 </head>
 <body>
 
@@ -49,39 +50,41 @@
 import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
 
 let bil = new Bilza("bilza", 70);
-//-We gave size to canvas which will always be 640 X 360
-bil.resizeCanvas(640 , 360);
 
 const grid = cf.grid(10,10,"grey");
 bil.insert.alwaysOn(grid);
+//----------------------------
+//---Keep first comp x and y responsive which it is by default
+const compResp= getComp("green");
+compResp.x.set(0);
+compResp.y.set(30);
+bil.insert.add(compResp,0,20);
 
-const comp = cf.fillRect(hsl(240));
-/**
- * Most important line should be applied immediately after creation
-This will make the Dimentions (width and height) as 
-non-responsive i.e they will use their values 
-as raw numbers and not as percentage of screen 
-width or height 
- */
+//---Keep second comp x and y Non-responsive
+const compNonResp= getComp("red");
+//--This line will replace the responsive x and y 
+//- of the comp with new x and y which are non-responsive
+compNonResp.setRespLoc(false);
+compNonResp.x.set(0);
+compNonResp.y.set(30);
+bil.insert.add(compNonResp,0,20);
 
-comp.setRespDims(false);
+//---now lets animate both of them to 90
+compResp.x.animate(2,10,0,90);
 
+compNonResp.x.animate(2,10,0,90);
 
-comp.align(1,1);
-comp.alignRotate(1,1);
-comp.x.set(50);
-comp.y.set(50);
-
-comp.width.set(10);
-comp.height.set(10);
-//--note the value 10 to 300 is in pixels
-comp.width.oscillate(1,60,10,300,5);
-//--note the value 10 to 300 is in pixels
-comp.height.oscillate(1,60,10,300,5);
-
-bil.insert.add(comp, 0, 65);
 const ui = new Ui(bil);
 bil.draw();
+
+
+function getComp(color){
+const comp = cf.fillRect(color);
+comp.width.set(10);
+comp.height.set(10);
+return comp;
+}
+
 </script>
 
 <pre class="language-javascript">
@@ -89,39 +92,41 @@ bil.draw();
 import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
 
 let bil = new Bilza("bilza", 70);
-//-We gave size to canvas which will always be 640 X 360
-bil.resizeCanvas(640 , 360);
 
 const grid = cf.grid(10,10,"grey");
 bil.insert.alwaysOn(grid);
+//----------------------------
+//---Keep first comp x and y responsive which it is by default
+const compResp= getComp("green");
+compResp.x.set(0);
+compResp.y.set(30);
+bil.insert.add(compResp,0,20);
 
-const comp = cf.fillRect(hsl(240));
-/**
- * Most important line should be applied immediately after creation
-This will make the Dimentions (width and height) as 
-non-responsive i.e they will use their values 
-as raw numbers and not as percentage of screen 
-width or height 
- */
+//---Keep second comp x and y Non-responsive
+const compNonResp= getComp("red");
+//--This line will replace the responsive x and y 
+//- of the comp with new x and y which are non-responsive
+compNonResp.setRespLoc(false);
+compNonResp.x.set(0);
+compNonResp.y.set(30);
+bil.insert.add(compNonResp,0,20);
 
-comp.setRespDims(false);
+//---now lets animate both of them to 90
+compResp.x.animate(2,10,0,90);
 
+compNonResp.x.animate(2,10,0,90);
 
-comp.align(1,1);
-comp.alignRotate(1,1);
-comp.x.set(50);
-comp.y.set(50);
-
-comp.width.set(10);
-comp.height.set(10);
-//--note the value 10 to 300 is in pixels
-comp.width.oscillate(1,60,10,300,5);
-//--note the value 10 to 300 is in pixels
-comp.height.oscillate(1,60,10,300,5);
-
-bil.insert.add(comp, 0, 65);
 const ui = new Ui(bil);
 bil.draw();
+
+
+function getComp(color){
+const comp = cf.fillRect(color);
+comp.width.set(10);
+comp.height.set(10);
+return comp;
+}
+
 </code>
 </pre>
 

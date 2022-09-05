@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='./misc/dark.css'>
+    <script src="./misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="./misc/custom.css">   
+
+<title>Detailed Introduction Bilza.js</title>
+
+</head>
+<body>
+
+<a href="/" >Home</a>    
+<hr>
+<a href="/samples.html" >Samples</a>   
+<hr>
+
+<h1>Bilza.js Responsive Vs Non Responsive Mode</h1>
+<p>Lets first understand what responsive and non responsive means from the point of view of a drawing / animation library.</p>
+
+<h3>Responsive Mode</h3>
+<ol>
+    <li>In responsive mode the library will (generally) NOT know the width and height of the drawing canvas before run time.</li>
+    <li>All the props of a component which needs to be re-sized with the canvas size will use percentages and not raw number value.</li>
+</ol>
+
+<h3>Non Responsive Mode</h3>
+<ol>
+    <li>In Non-responsive mode the library will (generally) Know the width and height of the drawing canvas in advance before run time. This happens when the artist already know the size of the screen he/she is creating animation for.</li>
+    <li>All the props of a component will use raw number value and not percentages.Components are drawn the same size irrespective of the screen size.</li>
+</ol>
+
+<blockquote>In Responsive mode the animation / drawings will RESPOND/change with change in the width and height of the canvas, where as in Non-Responsive mode the animation and drawings are always drawn at the same size since the size of the canvas is already known.</blockquote>
+
+<hr/>
+<p>So now you must be thinking that there must be one method that we can call and put the entire library into responsive or non-responsive mode.Unfortunately there is no such method and here is why.</p>
+
+<blockquote>The way Responsiveness is implemented in Bilza.js it gives a lot of power to the user. The user can get down to the level of each prop and set it responsive or not.</blockquote>
+
+<p>The way Bilza.js implements Responsiveness is that by default the settings are all set for responsive mode and if the user wish he can change these settings.</p>
+
+<blockquote>In Bilza.js we do not make the entire library as responsive or non-responsive rather we make each component responsive or non responsive individually.</blockquote>
+
+
+<p>For example if we have 2 FillRect (filled rectangles) on screen, first of which is set to responsive and the second one is set to non-responsive. Now if we set both of their x to 50. The first rectange which is set to responsive mode will go to where x = 50% of the screen and will end up in the middle of the screen no matter what the size of the screen is. The second rectangle which is set to non-responsive will just move 50 pixels, if we make the screen size less than 50 pix the component will move out of the screen.</p>
+
+<blockquote>In Bilza.js we can have responsive and non-responsive components both existing at the same time on screen, there is no restrictions, the user has to decided if that works for him or not.</blockquote>
+
+<p>Now that we have understood that we can set individual components as responsive and non-responsive and they can co-exist in one animation there is one more detail which will allow even more control to the user.</p>
+
+<hr/>
+
+<p><b>When we say "Making a Component Responsive (or not responsive)" what that actually means?</b></p>
+
+<p>Making a component responsive or non responsive actually can further be broken down into 3 parts.</p>
+<ol>
+    <li>Making the X and Y coordinates of the component responsive / non responsive</li>
+
+    <blockquote>setRespLoc(tf :boolean = true) will set the x and y coordinates of a component responsive or non-responsive </blockquote>
+    
+    <li>Making the Width and Height of the component responsive / non responsive</li>
+    <blockquote>setRespDims(tf :boolean = true) will set the width and height of a component responsive or non-responsive </blockquote>
+
+    <li>Making Padding of the component responsive / non responsive</li>
+    <blockquote>setRespPadding(tf :boolean = true) will set the padding of a component responsive or non-responsive </blockquote>
+</ol>
+
+<blockquote>In Bilza.js we make individual components responsive or non-responsive and by that we mean that you can make their x,y values responsive or non-responsive, making width and height values responsive or non-responsive and finally making the padding responsive or non-responsive.</blockquote>
+
+<p>Bilza.js puts no restriction on your choices you can make all three sets of props (of a component) responsive or just set one of the them un-responsive, <b>you do what you do</b> .</p>
+
+<h3>Responsive Vs No-Responsive Dimentions (Width,Height) Example</h3>
+<a href="/coreTests/fillRect/widthHeightGrowShrink.html">Example Width and Height Responsive</a>
+
+<br>
+
+<a href="/coreTests/fillRect/widthHeightGrowShrinkNonResp.html">Example Width and Height Non-Responsive</a>
+
+<h3>Responsive Vs No-Responsive Coordinates (x,y) Example</h3>
+
+<a href="/coreTests/fillRect/responsiveVsNonRespLoc.html">Example responsive vs Non-responsive x and y.</a>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>
