@@ -44,38 +44,43 @@
 </table>
 
 </div>
-<!-- <a href="../../src/aniPresets/animationChaining.js"></a> -->
+<!-- <a href="../src/bilza.js"></a> -->
 <script  type="module">
 import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
+
 let bil = new Bilza("bilza", 70);
 
-const fc = cf.frameCounter(hsl(0));
-fc.align(1,1);
-fc.goto(0,50,50);
-fc.fontSize.set(80);
-fc.colorBackground.set(hsl(60,75));
-bil.insert.add(fc,0,20);
+bil.background.color.set("#031363");
 
-const comp = cf.staticGrid(30,30,hsl(0));
-comp.setPaddings(10);
+const comp = cf.circle( 5 , hsl(120));
+comp.width.set(5);
+/**
+ * By default padding = Non-Responsive 
+ * This line will make paddings reactive i.e it will 
+ * take in percentage rather than numbers.
+ * This line should be placed immediately after creation
+ */
+comp.setRespPadding(true);
+
+bil.insert.add(comp, 0, 20);
+
+comp.align(1,1);
+comp.x.set(50);
+comp.y.set(50);
+
+comp.width.set(25);
+
 comp.showBackground.set(true);
-comp.border.set(3);
-comp.showNumbers.set(true);
-comp.colorNumbers.set(hsl(0,15));
-comp.colorBorder.set(hsl(0));
+comp.colorBackground.set( hsl(300));
 
-//===---Animation Settings
-comp.x.set(0);
-    comp.y.set(0);
-    comp.width.set(30);
-    comp.height.set(30);
-    comp.x.animate(1, 5, 0, 90);
-    comp.y.animate(6, 10, 0, 90);
-    comp.x.animate(11, 15, 90, 0);
-    comp.y.animate(16, 20, 90, 0);
-//---------------------------------
+comp.border.set(4);
+comp.colorBorder.set( hsl(60) );
 
-bil.insert.add(comp,0,25);
+comp.paddingLeft.animate(2, 4, 0, 20);
+comp.paddingRight.animate(5, 7, 0, 20);
+comp.paddingTop.animate(8, 10, 0, 20);
+comp.paddingBottom.animate(11,14, 0, 20);
+
 const ui = new Ui(bil);
 bil.draw();
 </script>
@@ -85,33 +90,37 @@ bil.draw();
 import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
 let bil = new Bilza("bilza", 70);
 
-const fc = cf.frameCounter(hsl(0));
-fc.align(1,1);
-fc.goto(0,50,50);
-fc.fontSize.set(80);
-fc.colorBackground.set(hsl(60,75));
-bil.insert.add(fc,0,20);
+bil.background.color.set("#031363");
 
-const comp = cf.staticGrid(30,30,hsl(0));
-comp.setPaddings(10);
+const comp = cf.circle( 5 , hsl(120));
+comp.width.set(5);
+/**
+ * By default padding = Non-Responsive 
+ * This line will make paddings reactive i.e it will 
+ * take in percentage rather than numbers.
+ * This line should be placed immediately after creation
+ */
+comp.setRespPadding(true);
+
+bil.insert.add(comp, 0, 20);
+
+comp.align(1,1);
+comp.x.set(50);
+comp.y.set(50);
+
+comp.width.set(25);
+
 comp.showBackground.set(true);
-comp.border.set(3);
-comp.showNumbers.set(true);
-comp.colorNumbers.set(hsl(0,15));
-comp.colorBorder.set(hsl(0));
+comp.colorBackground.set( hsl(300));
 
-//===---Animation Settings
-comp.x.set(0);
-    comp.y.set(0);
-    comp.width.set(30);
-    comp.height.set(30);
-    comp.x.animate(1, 5, 0, 90);
-    comp.y.animate(6, 10, 0, 90);
-    comp.x.animate(11, 15, 90, 0);
-    comp.y.animate(16, 20, 90, 0);
-//---------------------------------
+comp.border.set(4);
+comp.colorBorder.set( hsl(60) );
 
-bil.insert.add(comp,0,25);
+comp.paddingLeft.animate(2, 4, 0, 20);
+comp.paddingRight.animate(5, 7, 0, 20);
+comp.paddingTop.animate(8, 10, 0, 20);
+comp.paddingBottom.animate(11,14, 0, 20);
+
 const ui = new Ui(bil);
 bil.draw();
 </code>
