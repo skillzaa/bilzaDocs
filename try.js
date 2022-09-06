@@ -2,38 +2,36 @@ import Bilza, { Ui, CompFactory as cf, hsl} from "./src/bilza.js";
 
 let bil = new Bilza("bilza", 70);
 
-const grid = cf.grid(10,10,"grey");
-bil.insert.alwaysOn(grid);
-//----------------------------
-//---Keep first comp x and y responsive which it is by default
-const compResp= getComp("green");
-compResp.x.set(0);
-compResp.y.set(30);
-bil.insert.add(compResp,0,20);
+bil.background.color.set("#031363");
 
-//---Keep second comp x and y Non-responsive
-const compNonResp= getComp("red");
-//--This line will replace the responsive x and y 
-//- of the comp with new x and y which are non-responsive
-compNonResp.setRespLoc(false);
-compNonResp.x.set(0);
-compNonResp.y.set(30);
-bil.insert.add(compNonResp,0,20);
+const txt = cf.text("Text Padding Demo", "#ffff00");
+/**
+ * By default padding = Non-Responsive 
+ * This line will make paddings reactive i.e it will 
+ * take in percentage rather than numbers.
+ * This line should be placed immediately after creation
+ */
+txt.setRespPadding(true);
 
-//---now lets animate both of them to 100
+bil.insert.add(txt, 0, 20);
 
-compResp.x.animate(2,10,0,90);
-compNonResp.x.animate(2,10,0,90);
+txt.align(1,1);
+txt.x.set(50);
+txt.y.set(50);
+
+txt.fitToWidth.set(true);
+txt.width.set(50);
+
+txt.showBackground.set(true);
+txt.colorBackground.set("#000000");
+
+txt.border.set(4);
+txt.colorBorder.set("red");
+
+txt.paddingLeft.animate(2, 4, 0, 20);
+txt.paddingRight.animate(5, 7, 0, 20);
+txt.paddingTop.animate(8, 10, 0, 20);
+txt.paddingBottom.animate(11,14, 0, 20);
 
 const ui = new Ui(bil);
 bil.draw();
-
-
-function getComp(color){
-const comp = cf.fillRect(color);
-
-comp.width.set(10);
-comp.height.set(10);
-
-return comp;
-}

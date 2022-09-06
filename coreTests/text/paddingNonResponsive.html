@@ -20,7 +20,7 @@
     background-color: rgb(1, 1, 45);
 }
 </style>
-    <!-- <script src="./00misc/custom.css"></script> -->
+    <!-- <script src="../00misc/custom.css"></script> -->
     <script src="../00misc/prism.js"></script>
     <link rel="stylesheet" href="../00misc/prism.css">   
 
@@ -44,52 +44,68 @@
 </table>
 
 </div>
+<!-- <a href="../src/bilza.js"></a> -->
+<script  type="module">
+import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
 
-<script  type="module" >
-import Bilza, { Ui,CompFactory as cf } from "../bilza/src/bilza.js";
-let bil = new Bilza("bilza",70);
-// bil.resizeCanvas(800,300);
-//-----------------------------------------
-const grid = cf.grid("grey");
-bil.insert.alwaysOn(grid);
+let bil = new Bilza("bilza", 70);
 
-const fillRect = cf.fillRect("red");
-fillRect.xAlign = fillRect.XAlignOpt.Mid;
-fillRect.yAlign = fillRect.YAlignOpt.Mid;
-fillRect.goto(0,50,50);
+bil.background.color.set("#031363");
 
-//----transparency
-fillRect.opacity.goto(10,50);
+const t = cf.text("Text Padding Demo", "#ffff00");
+bil.insert.add(t, 0, 20);
 
-fillRect.width.animate(2,5,10,90);
-fillRect.height.animate(6,10,10,90);
+t.align(1,1);
+t.x.set(50);
+t.y.set(50);
 
-bil.insert.add(fillRect,0,15);
+t.fitToWidth.set(true);
+t.width.set(50);
+
+t.showBackground.set(true);
+t.colorBackground.set("#000000");
+
+t.border.set(4);
+t.colorBorder.set("red");
+
+t.paddingLeft.animate(2, 4, 0, 45);
+t.paddingRight.animate(5, 7, 0, 45);
+t.paddingTop.animate(8, 10, 0, 45);
+t.paddingBottom.animate(11,14, 0, 45);
+
 const ui = new Ui(bil);
 bil.draw();
 </script>
 
 <pre class="language-javascript">
 <code>
-import Bilza, { Ui,CompFactory as cf } from "../bilza/src/bilza.js";
-let bil = new Bilza("bilza",70);
-// bil.resizeCanvas(800,300);
-//-----------------------------------------
-const grid = cf.grid("grey");
-bil.insert.alwaysOn(grid);
+import Bilza, { Ui, CompFactory as cf, hsl} from "../../src/bilza.js";
 
-const fillRect = cf.fillRect("red");
-fillRect.xAlign = fillRect.XAlignOpt.Mid;
-fillRect.yAlign = fillRect.YAlignOpt.Mid;
-fillRect.goto(0,50,50);
+let bil = new Bilza("bilza", 70);
 
-//----transparency
-fillRect.opacity.goto(10,50);
+bil.background.color.set("#031363");
 
-fillRect.width.animate(2,5,10,90);
-fillRect.height.animate(6,10,10,90);
+const t = cf.text("Text Padding Demo", "#ffff00");
+bil.insert.add(t, 0, 20);
 
-bil.insert.add(fillRect,0,15);
+t.align(1,1);
+t.x.set(50);
+t.y.set(50);
+
+t.fitToWidth.set(true);
+t.width.set(50);
+
+t.showBackground.set(true);
+t.colorBackground.set("#000000");
+
+t.border.set(4);
+t.colorBorder.set("red");
+
+t.paddingLeft.animate(2, 4, 0, 45);
+t.paddingRight.animate(5, 7, 0, 45);
+t.paddingTop.animate(8, 10, 0, 45);
+t.paddingBottom.animate(11,14, 0, 45);
+
 const ui = new Ui(bil);
 bil.draw();
 </code>
