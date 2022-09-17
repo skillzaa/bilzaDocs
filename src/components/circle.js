@@ -3,13 +3,12 @@ import { AniNumber, AniBoolean, } from "../animationModule/animations.js";
 export default class Circle extends BaseComponent {
     constructor(radius = 10, color = "#ff0000") {
         super();
-        this.width.set(Math.floor(radius * 2));
-        
         this.filled = new AniBoolean(true);
         this.startAngle = new AniNumber(0);
         this.endAngle = new AniNumber(360);
         this.lineWidth = new AniNumber(1);
         this.color.set(color);
+        this.width.set(Math.floor(radius * 2));
     }
     contentHeight() {
         return this.width.value();

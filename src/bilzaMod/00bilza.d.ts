@@ -1,9 +1,12 @@
+import { IComponent } from "../bilza.js";
 import Background from "../components/background.js";
+import IScene from "../scene/IScene.js";
 import Settings from "./settings.js";
-import Insert from "./insert.js";
+import CompFactory from "./insert/compFactory.js";
+import Insert from "./insert/insert.js";
 export default class Bilza {
     background: Background;
-    insert: Insert;
+    _insert: Insert;
     set: Settings;
     private soundTrackElement;
     soundTrack: string | null;
@@ -25,5 +28,10 @@ export default class Bilza {
     resizeCanvas(width: number, height: number | null): void;
     getLastMsDelta(): number;
     isRunning(): boolean;
+    add(startTime: number, endTime: number): CompFactory;
+    alwaysOn(): CompFactory;
+    append(duration: number): CompFactory;
+    insert(comp: IComponent, startTime: number, endTime: number, actionType: string): IComponent;
+    addScene(scene: IScene): void;
 }
 //# sourceMappingURL=00bilza.d.ts.map

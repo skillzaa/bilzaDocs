@@ -1,9 +1,8 @@
-import { CompFactory as cf, hsl, Scene } from "../bilza.js";
+import { hsl, Scene } from "../bilza.js";
 export default function welcome(startTime, endTime, hslColorNo) {
-    const sce = new Scene(startTime, endTime);
-    const txt = cf.text("Test Scene", hsl(0));
-    txt.templ.h1();
-    txt.theme.color(240);
-    sce.add(txt, sce.startTimePlus(0), sce.endTimeMinus(0));
-    return sce;
+    const scene = new Scene(startTime, endTime);
+    const txt = scene.add(startTime, endTime).text("Test Scene", hsl(0));
+    txt.templ.hdg();
+    txt.theme.color(hslColorNo);
+    return scene;
 }
