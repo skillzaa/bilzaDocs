@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='../misc/dark.css'>
+    <script src="../misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="../misc/custom.css">   
+
+<title>Bilza How it Works</title>
+
+</head>
+<body>
+
+    <a href="../index.html" >Home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compCore/" >Comp Core Examples</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compProjects/" >Comp Projects</a>    
+    <!-- <a href="./samples.html" >Samples</a>&nbsp;     -->
+    <hr>
+
+<h1>How Bilza.js Works</h1>
+
+Following are the steps to create animations with bilza.js:
+
+<h3>Create Bilza Engine</h3>
+
+<p>The first step is to create an instance of bilza engine. Here we decide about the width and height of the canvas that we want to create.</p>
+
+<p>Also in this step we decide if we want to keep the canvas size responsive (i.e equal to 70% of the screen size) or to make the canvas of a fixed size.</p> 
+
+<h3>Create Components</h3> 
+
+<p>Every thing that you see on bilza canvas is a components</p>.
+
+<p>The list of Currently avaialbe components in the library is <a href="../components/index.html">here</a></p>
+
+<p>After creating a comp you can use these components to quickly draw complex animations.  </p>
+
+<h3>Editing Component Properites (props)</h3>
+
+<p>We edit components by editing their properties and attaching animations to them.</p> 
+
+<p>Each of these components have 2 sets of properties (called the props).</p> 
+<p>Base Component is the parent of all components. The first set of props are those that these components get from their parent object. These props are common among all the components (except few) and are refered to as <b>core props</b>.</p>
+
+<p>Second set of props is what is unique to that specific component.These props are refered to as <b>comp props</b>.</p>
+<p>The props that (almost) all of the components share are like:</p>
+    <ol>
+    <li> x</li>
+    <li> y</li>
+    <li> color</li>
+    <li> width</li>
+    <li> height</li>
+    <li> rotation</li>
+    <li> opacity</li>
+    <li> border</li>
+    <li> colorBorder</li>
+    <li> and many more .......</li>
+    </ol>
+
+<p>The props that are unique to each component are explained on the relevant page of that component.</p>
+
+<p>We add animation to a component by adding animation to one of its props.</p>
+
+<h3>Adding Components into Bilza Engine</h3>
+
+<p>When ever we add components into bilza engine, we have to tell the engine the starting time and the ending time of that components. A component is just loaded and displayed between its starting frame and ending frame.When all components have completed their ending frame, the animation ends.</p>
+
+<p>When we insert a component into bilza engine, we have following options:</p>
+
+<h4>alwaysOn</h4>
+
+<p>This will make the component visible throughout the duration of the animation. However, inserting components with alwaysOn does not affect the duration of the animation, we need other components to give the animation some duration to run.</p>
+
+<h4>add</h4>
+
+<p>When we "add" a component, we have to provide the starting time (also called the starting frame) and the end time. The component will appear just between its starting and ending time. If the ending time is larger than the current duration of the animation: The animation will extend its self to accommodate the newly inserted component.</p>
+
+<p> One can create blank frames while inserting components and the engine will not object to that assuming you actually mean to create blank frames. For example, if we insert component "One" from frame 0 to 60 and component "Two" from frame 120 to 300. The animation duration has been set to 300 seconds, but there is no component displayed between frame 60 and 120. This is not an error, but may occur without knowing.</p>
+
+<h4>append</h4>
+<small>work in progress</small>
+<p>This comes in handy when we want to use premade scenes and just append them together (stitch them together like LEGO pieces).</p>
+
+
+<h3>Running the Animation</h3>
+
+<p>The last step is to run the animation.</p>
+
+
+</body>
+</html>

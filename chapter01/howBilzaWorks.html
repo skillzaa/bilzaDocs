@@ -23,73 +23,25 @@
 
 <h1>How Bilza.js Works</h1>
 
-Following are the steps to create animations with bilza.js:
+<p>Creating Animation is just like creating a video. Everything that is to be displayed on screen needs to have a start time and end time. Once all the items have completed their end time the animation stops.</p>
 
-<h3>Create Bilza Engine</h3>
+<p>In Bilza.js everything that is drawn on the screen is called component (comp). "Text" is a component, "Line" is a component, "Grid" is a component and so on.</p>
 
-<p>The first step is to create an instance of bilza engine. Here we decide about the width and height of the canvas that we want to create.</p>
+<small>Component is refered in these docs as "comp" and Properties are referred to as "props".</small>
 
-<p>Also in this step we decide if we want to keep the canvas size responsive (i.e equal to 70% of the screen size) or to make the canvas of a fixed size.</p> 
+<p>Every comp is derived from a Parent / Base Object called "BaseComponent". All the properties (props) of BaseComponent are available in all the child comps. These props are like color, width, height etc. The props derived from BaseComponent are called "core props". </p>
 
-<h3>Create Components</h3> 
+<p>Though every comp get "core props" from BaseComponent however not every comp implements each one of these props. For example "circle" comp does not implement height prop.</p>
 
-<p>Every thing that you see on bilza canvas is a components</p>.
+<p>In addition to "core props" each component has "Comp Props". The comp props are those which are unique to some component as per its requirement.</p>
 
-<p>The list of Currently avaialbe components in the library is <a href="../components/index.html">here</a></p>
+<blockquote>In Bilza.js everything that is drawn on screen is a Component (comp). Components have Properties (props). When a component is drawn it represents the value of its props. We alter the props and attach animation to them to create animations.</blockquote>
 
-<p>After creating a comp you can use these components to quickly draw complex animations.  </p>
+<p>When ever we add a comp to Bilza.js engine we have to give it the starting time and ending time. A comp will just be displayed between these two times.</p>
 
-<h3>Editing Component Properites (props)</h3>
+<p>We can also add components which are displayed all the time.</p>
 
-<p>We edit components by editing their properties and attaching animations to them.</p> 
-
-<p>Each of these components have 2 sets of properties (called the props).</p> 
-<p>Base Component is the parent of all components. The first set of props are those that these components get from their parent object. These props are common among all the components (except few) and are refered to as <b>core props</b>.</p>
-
-<p>Second set of props is what is unique to that specific component.These props are refered to as <b>comp props</b>.</p>
-<p>The props that (almost) all of the components share are like:</p>
-    <ol>
-    <li> x</li>
-    <li> y</li>
-    <li> color</li>
-    <li> width</li>
-    <li> height</li>
-    <li> rotation</li>
-    <li> opacity</li>
-    <li> border</li>
-    <li> colorBorder</li>
-    <li> and many more .......</li>
-    </ol>
-
-<p>The props that are unique to each component are explained on the relevant page of that component.</p>
-
-<p>We add animation to a component by adding animation to one of its props.</p>
-
-<h3>Adding Components into Bilza Engine</h3>
-
-<p>When ever we add components into bilza engine, we have to tell the engine the starting time and the ending time of that components. A component is just loaded and displayed between its starting frame and ending frame.When all components have completed their ending frame, the animation ends.</p>
-
-<p>When we insert a component into bilza engine, we have following options:</p>
-
-<h4>alwaysOn</h4>
-
-<p>This will make the component visible throughout the duration of the animation. However, inserting components with alwaysOn does not affect the duration of the animation, we need other components to give the animation some duration to run.</p>
-
-<h4>add</h4>
-
-<p>When we "add" a component, we have to provide the starting time (also called the starting frame) and the end time. The component will appear just between its starting and ending time. If the ending time is larger than the current duration of the animation: The animation will extend its self to accommodate the newly inserted component.</p>
-
-<p> One can create blank frames while inserting components and the engine will not object to that assuming you actually mean to create blank frames. For example, if we insert component "One" from frame 0 to 60 and component "Two" from frame 120 to 300. The animation duration has been set to 300 seconds, but there is no component displayed between frame 60 and 120. This is not an error, but may occur without knowing.</p>
-
-<h4>append</h4>
-<small>work in progress</small>
-<p>This comes in handy when we want to use premade scenes and just append them together (stitch them together like LEGO pieces).</p>
-
-
-<h3>Running the Animation</h3>
-
-<p>The last step is to run the animation.</p>
-
+<p>After the comps have been added, their prop values set and animations attached to props: all we have to do is call draw  or start.</p>
 
 </body>
 </html>
