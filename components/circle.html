@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href='../misc/dark.css'>
+    <script src="../misc/prism.js"></script>
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
+    <link rel="stylesheet" href="../misc/custom.css">   
+
+<title>Bilza Components Home</title>
+
+</head>
+<body>
+
+    <a href="../index.html" >Home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compCore/" >Comp Core Examples</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compProjects/" >Comp Projects</a>    
+    <!-- <a href="./samples.html" >Samples</a>&nbsp;     -->
+    <hr>
+
+<h1>Circle</h1>
+<p>Circle component draws circles and arcs.</p>
+<p>Circle just like any other component also has all the props of BaseComponent object.</p>
+
+<p>The circle takes in following arguments at creation time.</p>
+
+<table>
+    <tr>
+        <td colspan="25%">Arg Name</td>
+        <td colspan="25%">Arg Type</td>
+        <td colspan="50%">Explanation</td>
+    </tr>
+<tr>
+    <td colspan="25%">radius</td>
+    <td colspan="25%">Number</td>
+    <td colspan="50%">radius * 2  = circle width</td>
+</tr>
+<tr>
+    <td colspan="25%">color</td>
+    <td colspan="25%">string</td>
+    <td colspan="50%">It can be any valid CSS string for color.</td>
+</tr>
+
+</table>
+
+
+<p>Following are props unique to Circle Component.</p>
+<table>
+    <tr>
+        <td colspan="25%">Prop Name</td>
+        <td colspan="25%">Prop Type</td>
+        <td colspan="50%">Explanation</td>
+    </tr>
+<tr>
+    <td colspan="25%">startAngle</td>
+    <td colspan="25%"><a href="../propTypes/aniNumber.html">AniNumber</a></td>
+    <td colspan="50%">The starting angle of the arc</td>
+</tr>
+<tr>
+    <td colspan="25%">endAngle</td>
+    <td colspan="25%"><a href="../propTypes/aniNumber.html">AniNumber</a></td>
+    <td colspan="50%">The ending angle of the arc</td>
+</tr>
+<tr>
+    <td colspan="25%">lineWidth</td>
+    <td colspan="25%"><a href="../propTypes/aniNumber.html">AniNumber</a></td>
+    <td colspan="50%">Circle boundry line width</td>
+</tr>
+<tr>
+    <td colspan="25%">filled</td>
+    <td colspan="25%"><a href="../propTypes/aniBoolean.html">AniBoolean</a></td>
+    <td colspan="50%">A boolean that decides if to fill the circle with color or not</td>
+</tr>
+
+</table>
+
+<p>The height prop of the BaseComponent is not implemented since the width and height of a circle are always the same. So animating height or chaging height will have no effect.</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
