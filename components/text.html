@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-        * {
-    padding:0;
-    margin:0;
-}
-
-
-</style>
-    <!-- <script src="../00misc/custom.css"></script> -->
+<link rel='stylesheet' href='../misc/dark.css'>
     <script src="../misc/prism.js"></script>
-    <link rel="stylesheet" href="../misc/prism.css">   
-    <link rel="stylesheet" href="../misc/dark.css">   
+    <link rel="stylesheet" href="./misc/prism.css">   
+  
     <link rel="stylesheet" href="../misc/custom.css">   
 
-    <title>Bilza TextComponent</title>
+<title>Bilza.js Text Component</title>
+
 </head>
 <body>
+
+    <a href="../index.html" >Home</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compCore/" >Comp Core Examples</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <a href="../compProjects/" >Comp Projects</a>    
+    <!-- <a href="./samples.html" >Samples</a>&nbsp;     -->
+    <hr>
 
 <h1>Text Component</h1>
 
@@ -45,7 +44,7 @@
 
 <p>Once "fitToWidth" (or fitToHeight) prop is set to True, the "fontSize" prop is disabled. It means that all the animations etc attached to comp "fontSize" prop will not run and Text comp dimentions will be decided by width prop.</p>
 
-<p>When "fitToWidth" is set to false (the default) the width of Text comp is treated as "Maximum Width". It means that we can set any value for fontSize prop and it is fine but if the resultant width is larger than comp.width then it is reduced to the given width.</p>
+<p>When "fitToWidth" is set to false (default setting) the width of Text comp is treated as "Maximum Width". It means that we can set any value for fontSize prop and it is fine but if the resultant width is larger than comp.width then it is reduced to the given width.</p>
 <p>By default the width (and also height) value of a Text comp are set at 300% thus they have no effect most of the times. To see some effect  these values need to be reduced by the user.</p>
 
 <p><a href="https://skillzaa.github.io/bilzaDocs/compProjects/text/fitToWidth.html" target="_blank">Text FitToWidth True Example</a></p>
@@ -76,6 +75,8 @@
 <li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" it is not a problem unless we assign conflicting values / animations to these props. for example IF height prop is increasing the size of the Text on every draw and width prop is reducing the size of the Text on every draw this will cause flickering.</li>
 
 <li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" the width prop is run first and than the height prop. It means that if both of these cancel each other effect it is the height prop that runs last and thus is height prop thats result are visible on the screen.</li>
+
+<li>An interesting thing to know is that the font size of text (in  browser not specific to Bilza.js) determines its height and the width is decided by the Character used.</li>
 </ul>
 
 <br>

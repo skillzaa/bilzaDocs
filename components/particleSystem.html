@@ -21,11 +21,11 @@
     <!-- <a href="./samples.html" >Samples</a>&nbsp;     -->
     <hr>
 
-<h1>Line</h1>
-<p>Line component draws line on the screen.</p>
+<h1>Particle System</h1>
+<p>Particle System component creates a particle system on the screen.</p>
 
 <p>This comp takes in following arguments at creation time.</p>
-<!-- x1 :number=0,y1 :number=0,x2 :number=20,y2 :number=20,color :string ="#000000" -->
+<!-- count :number= 20,color :string="#008000",delay :number=50 -->
 <table>
     <tr>
         <td colspan="25%">Arg Name</td>
@@ -33,35 +33,24 @@
         <td colspan="50%">Explanation</td>
     </tr>
 <tr>
-    <td colspan="25%">x1</td>
-    <td colspan="25%">Number</td>
-    <td colspan="50%">The x axis of the starting vertex (mostly in percentage from 0 to 100) of the line</td>
+    <td colspan="25%">count</td>
+    <td colspan="25%">number</td>
+    <td colspan="50%">The number of particles to display.</td>
 </tr>
-<tr>
-    <td colspan="25%">y1</td>
-    <td colspan="25%">Number</td>
-    <td colspan="50%">The y axis of the starting vertex (mostly in percentage from 0 to 100) of the line</td>
-</tr>
-<tr>
-    <td colspan="25%">x2</td>
-    <td colspan="25%">Number</td>
-    <td colspan="50%">The x axis of the ending vertex (mostly in percentage from 0 to 100) of the line</td>
-</tr>
-<tr>
-    <td colspan="25%">y2</td>
-    <td colspan="25%">Number</td>
-    <td colspan="50%">The y axis of the ending vertex (mostly in percentage from 0 to 100) of the line.</td>
-</tr>
-
 <tr>
     <td colspan="25%">color</td>
     <td colspan="25%">string</td>
-    <td colspan="50%">Color of the line.</td>
+    <td colspan="50%">The color of particles.</td>
+</tr>
+<tr>
+    <td colspan="25%">delay</td>
+    <td colspan="25%">number</td>
+    <td colspan="50%">Delay between particles move.</td>
 </tr>
 
 </table>
 
-<p>Following are comp props (props unique to Circle Component).</p>
+<h3>Comp Props</h3>
 <table>
     <tr>
         <td colspan="25%">Prop Name</td>
@@ -69,23 +58,31 @@
         <td colspan="50%">Explanation</td>
     </tr>
 <tr>
-    <td colspan="25%">x2</td>
-    <td colspan="25%">AniPerc | AniNumber</a></td>
-    <td colspan="50%">The x axis of ending point of line.</td>
+    <td colspan="25%">count</td>
+    <td colspan="25%">AniNumber</a></td>
+    <td colspan="50%">The number of particles.</td>
 </tr>
 <tr>
-    <td colspan="25%">y2</td>
-    <td colspan="25%">AniPerc | AniNumber</a></td>
-    <td colspan="50%">The y axis of ending point of line.</td>
+    <td colspan="25%">particleSize</td>
+    <td colspan="25%">AniNumber</a></td>
+    <td colspan="50%">The size of the particles.</td>
 </tr>
-
 <tr>
     <td colspan="25%">lineWidth</td>
     <td colspan="25%">AniNumber</a></td>
-    <td colspan="50%">The width of line</td>
+    <td colspan="50%">The size of line drawing the particles boundry.</td>
+</tr>
+<tr>
+    <td colspan="25%">lineColor</td>
+    <td colspan="25%">string</a></td>
+    <td colspan="50%">The color of particles boundry.</td>
+</tr>
+<tr>
+    <td colspan="25%">filled</td>
+    <td colspan="25%">AniBoolean</a></td>
+    <td colspan="50%">To show particles filled/empty.</td>
 </tr>
 </table>
-
 
 <br>
 <br>
