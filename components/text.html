@@ -72,9 +72,9 @@
 
 <li class="blue">When "fitToWidth" OR "fitToHeight" Props are set to "False", they act as <span class="red">maximum width</span> and <span class="red">maximum height</span>. </li>
 
-<li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" it is not a problem unless we assign conflicting values / animations to these props. for example IF height prop is increasing the size of the Text on every draw and width prop is reducing the size of the Text on every draw this will cause flickering.</li>
+<li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" it is not a problem unless we assign conflicting values / animations to these props. for example if height prop is increasing the size of the Text on every draw and width prop is reducing the size of the Text on every draw this will cause flickering.</li>
 
-<li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" the width prop is run first and than the height prop. It means that if both of these cancel each other effect it is the height prop that runs last and thus is height prop thats result are visible on the screen.</li>
+<li class="blue">If "fitToWidth" <span class="red">AND</span> "fitToHeight" Props are both set to "True" the height prop is run first and than the width prop. It means that if both of these cancel each other: it is the height prop that runs last and thus its (height prop) result are visible on the screen.</li>
 
 <li>An interesting thing to know is that the font size of text (in  browser not specific to Bilza.js) determines its height and the width is decided by the Character used.</li>
 </ul>
@@ -91,13 +91,13 @@
 
 <li class="magenta">How to create Non-Responsive text that does not shrink or grow with the screen size?</li>
 
-<p>If we keep the "fitToWidth" AND "fitToHeight" both as false the text comp will be non-responsive. It will be displayed based on fontSize and not width or height props.</p>
+<p>If we keep the "fitToWidth" AND "fitToHeight" both as false the text comp will be non-responsive. It will be displayed based on fontSize and not width or height props. However keep in mind that when "fitToWidth" or "fitToHeight" are false they act as maximum width and maximum height. For that if you want these two variables not to have any role just give them a large value. By default "fitToWidth" AND "fitToHeight" are both set to 300%.</p>
 
 <li class="magenta">How to create Responsive Text that grow and shrink with the screen?</li>
-<p>To make Text really Responsive where it adjest its self to the width as well as height of the canvas we need to set "fitToWidth" AND "fitToHeight" both as true. This will ensure that the text is fitted into the Box determined by the width and height props.</p>
+<p>To make Text really Responsive where it adjest its self to the width as well as height of the canvas we need to set either "fitToWidth" or "fitToHeight" as true. This will ensure that the text is fitted into the Box determined by the width/height (which ever is set true) and will use the other prop as maximum width/height.</p>
 
-<li class="magenta">If we set "fitToWidth" to true and keep "fitToHeight" as false; is that a problem, if yes why?</li>
-<p>Keeping "fitToWidth" as true and keeping "fitToHeight" as false is not a problem or error <span class="green">as long as you want the desired results</span>. For example we give Text comp width = 100% and the content is a long sentence, bilza will have to shrink it and it will look decent on the screen since to fit it into the width <span class="red">we will also need to adjest its height</span>. On the other hand if the content are very short e.g ("Hi") now if we fit this to the 100% of the screen width and there is no-restriction on the height it will conver the entire screen. If this is what you want then its ok.</p>
+<li class="magenta">What problems can we have with "fitToWidth" = true?</li>
+<p>For example if we give Text comp width = 100% and the content is a long sentence, bilza will have to shrink it and it will look decent on the screen since to fit it into the width <span class="red">we will also need to adjest its height</span>. On the other hand if the content are very short e.g ("Hi") now if we fit this to the 100% of the screen width and there is no-restriction on the height it will conver the entire screen. If this is what you want then its ok.</p>
 
 <a href="#">Using fitToWidth without fitToHeight</a>
 <a href="#">Using fitToHeight without fitToWidth</a>
@@ -113,11 +113,11 @@
 <p>To make 2 different Text comps have same fontSize all we have to do is set "fitToHeight" of both of them to true and then give their height props the same value. For example if 2 Text comps both have "fitToHeight" = true and height = 10% both of them will have same fontSize.</p>
 
 <li class="magenta">Can you please give an example of conflict between fitToHeight and fitToWidth?</li>
-
+<small>work in progress</small>
 <a href="#">Conflict between fitToHeight and fitToWidth</a>
 
 
-<li class="magenta">How to achieve if I want Text content to be smaller than or equal to some width Or if I want Text to be smaller than or equal to some height ?</li>
+<li class="magenta">What if I want Text content to be smaller than or equal to some width Or if I want Text to be smaller than or equal to some height ?</li>
 
 <p>When fitToWidth is set to false the value of width Prop is treated as "maximum Width" similarly when fitToHeight is set to false the value of height Prop is treated as "maximum Height". However you may not notice this since by default the width and height props are set at 300% so their effect is not visible. You can just set the width prop and the height prop to the desired numbers while fitToHeight and fitToWidth are false and they will allow Text to grow upto that point but not more.</p>
 
