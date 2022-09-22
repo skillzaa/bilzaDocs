@@ -8,6 +8,8 @@ import Pic from "../../components/pic.js";
 import Line from "../../components/line.js";
 import Circle from "../../components/circle.js";
 import CanvasBorder from "../../components/canvasBorder.js";
+import Wave from "../../components/wave.js";
+import Arrow from "../../components/arrow.js";
 import Row from "../../container/row.js";
 import SpriteSheet from "../../components/spriteSheet/spriteSheet.js";
 import SpriteSheetAlt from "../../components/spriteSheet/spriteSheetAlt.js";
@@ -18,6 +20,7 @@ export default class CompFactory {
     private actionType;
     private insert;
     constructor(startTime: number, endTime: number, actionType: string | undefined, insert: (comp: IComponent, startTime: number, endTime: number, actionType: string) => IComponent);
+    arrow(x1?: number, y1?: number, x2?: number, y2?: number, color?: string): Arrow;
     circle(radius?: number, colorHax?: string): Circle;
     canvasBorder(color?: string, borderWidth?: number): CanvasBorder;
     grid(cellWidthPerc?: number, cellHeightPerc?: number, colorHax?: string): Grid;
@@ -31,5 +34,6 @@ export default class CompFactory {
     particleSystem(count?: number, color?: string, framesToSkip?: number): ParticleSystem;
     line(x1?: number, y1?: number, x2?: number, y2?: number, color?: string): Line;
     row(incommingTextArray?: string): Row;
+    wave(): Wave;
 }
 //# sourceMappingURL=compFactory.d.ts.map
